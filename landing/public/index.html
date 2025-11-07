@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dancing Pandas</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: radial-gradient(circle at center, #fefefe 0%, #d8f0ff 100%);
+      overflow: hidden;
+    }
+
+    .panda {
+      width: 140px;
+      height: 140px;
+      margin: 40px;
+      background: white;
+      border-radius: 50% 50% 45% 45%;
+      position: relative;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      animation: idle 2s ease-in-out infinite alternate;
+    }
+
+    /* Ears */
+    .ear {
+      width: 45px;
+      height: 45px;
+      background: black;
+      position: absolute;
+      top: -15px;
+      border-radius: 50%;
+    }
+    .ear.left { left: 0; }
+    .ear.right { right: 0; }
+
+    /* Eyes */
+    .eye-patch {
+      width: 35px;
+      height: 40px;
+      background: black;
+      border-radius: 50%;
+      position: absolute;
+      top: 35%;
+    }
+    .eye-patch.left { left: 20px; transform: rotate(-8deg); }
+    .eye-patch.right { right: 20px; transform: rotate(8deg); }
+
+    .eye {
+      width: 14px;
+      height: 14px;
+      background: white;
+      border-radius: 50%;
+      position: absolute;
+      top: 13px;
+      left: 10px;
+    }
+
+    /* Nose */
+    .nose {
+      width: 14px;
+      height: 10px;
+      background: black;
+      border-radius: 50%;
+      position: absolute;
+      left: 50%;
+      top: 65%;
+      transform: translate(-50%, -50%);
+    }
+
+    /* Mouth */
+    .mouth {
+      position: absolute;
+      left: 50%;
+      top: 72%;
+      width: 30px;
+      height: 15px;
+      border-bottom: 3px solid black;
+      border-radius: 0 0 30px 30px;
+      transform: translateX(-50%);
+    }
+
+    @keyframes idle {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(-4px); }
+    }
+
+    @keyframes dance {
+      0%   { transform: rotate(0deg) scale(1); }
+      25%  { transform: rotate(10deg) scale(1.05); }
+      50%  { transform: rotate(-10deg) scale(1.05); }
+      75%  { transform: rotate(10deg) scale(1.05); }
+      100% { transform: rotate(0deg) scale(1); }
+    }
+
+    .dancing {
+      animation: dance 0.5s ease-in-out infinite;
+    }
+  </style>
+</head>
+<body>
+  <div class="panda" id="panda1">
+    <div class="ear left"></div>
+    <div class="ear right"></div>
+    <div class="eye-patch left"><div class="eye"></div></div>
+    <div class="eye-patch right"><div class="eye"></div></div>
+    <div class="nose"></div>
+    <div class="mouth"></div>
+  </div>
+
+  <div class="panda" id="panda2">
+    <div class="ear left"></div>
+    <div class="ear right"></div>
+    <div class="eye-patch left"><div class="eye"></div></div>
+    <div class="eye-patch right"><div class="eye"></div></div>
+    <div class="nose"></div>
+    <div class="mouth"></div>
+  </div>
+
+  <script>
+    document.querySelectorAll('.panda').forEach(p => {
+      p.addEventListener('click', () => {
+        p.classList.toggle('dancing');
+      });
+    });
+  </script>
+</body>
+</html>
