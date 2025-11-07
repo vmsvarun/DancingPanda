@@ -28,6 +28,13 @@
       animation: idle 2s ease-in-out infinite alternate;
     }
 
+    .panda.big {
+      width: 280px;
+      height: 280px;
+      background: #cde7ff;
+      border-radius: 50% 50% 40% 40%;
+    }
+
     /* Ears */
     .ear {
       width: 45px;
@@ -39,6 +46,12 @@
     }
     .ear.left { left: 0; }
     .ear.right { right: 0; }
+
+    .panda.big .ear {
+      width: 80px;
+      height: 80px;
+      top: -35px;
+    }
 
     /* Eyes */
     .eye-patch {
@@ -62,6 +75,19 @@
       left: 10px;
     }
 
+    .panda.big .eye-patch {
+      width: 70px;
+      height: 80px;
+      top: 32%;
+    }
+
+    .panda.big .eye {
+      width: 24px;
+      height: 24px;
+      top: 24px;
+      left: 18px;
+    }
+
     /* Nose */
     .nose {
       width: 14px;
@@ -74,6 +100,12 @@
       transform: translate(-50%, -50%);
     }
 
+    .panda.big .nose {
+      width: 26px;
+      height: 18px;
+      top: 60%;
+    }
+
     /* Mouth */
     .mouth {
       position: absolute;
@@ -84,6 +116,13 @@
       border-bottom: 3px solid black;
       border-radius: 0 0 30px 30px;
       transform: translateX(-50%);
+    }
+
+    .panda.big .mouth {
+      width: 60px;
+      height: 30px;
+      border-bottom-width: 4px;
+      top: 70%;
     }
 
     @keyframes idle {
@@ -106,6 +145,15 @@
 </head>
 <body>
   <div class="panda" id="panda1">
+    <div class="ear left"></div>
+    <div class="ear right"></div>
+    <div class="eye-patch left"><div class="eye"></div></div>
+    <div class="eye-patch right"><div class="eye"></div></div>
+    <div class="nose"></div>
+    <div class="mouth"></div>
+  </div>
+
+  <div class="panda big" id="panda3">
     <div class="ear left"></div>
     <div class="ear right"></div>
     <div class="eye-patch left"><div class="eye"></div></div>
