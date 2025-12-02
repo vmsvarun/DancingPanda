@@ -463,6 +463,30 @@ body {
   pointer-events: none;
 }
 
+.kitty .eye,
+.kitty .nose,
+.kitty .mouth,
+.kitty .whiskers {
+  z-index: 3;
+}
+
+.mini-cap,
+.service-cap {
+  z-index: 2;
+}
+
+.support-scarf,
+.support-sash,
+.dress-uniform,
+.medal-bar {
+  z-index: 1;
+}
+
+.gratitude-pin,
+.poppy-pin {
+  z-index: 2;
+}
+
 .mini-cap {
   --cap-color: #a74916;
   --cap-band: linear-gradient(90deg, #f6d089, #fff5dd, #c77834);
