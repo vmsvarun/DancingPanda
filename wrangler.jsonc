@@ -4,7 +4,7 @@
  */
 {
 	"$schema": "node_modules/wrangler/config-schema.json",
-	"name": "dancing-kitties",
+	"name": "workerpanda",
  	"compatibility_date": "2025-11-06",
  	"assets": {
  		// The path to the directory containing the `index.html` file to be served at `/`
