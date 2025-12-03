@@ -487,6 +487,189 @@ body {
   z-index: 2;
 }
 
+.knit-beanie {
+  position: absolute;
+  top: -34px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 60px;
+  background: linear-gradient(135deg, #7a3216, #5a2310);
+  border-radius: 60% 60% 45% 45%;
+  box-shadow:
+    0 10px 18px rgba(0, 0, 0, 0.25),
+    inset 0 -6px 10px rgba(0, 0, 0, 0.25);
+  z-index: 2;
+}
+
+.knit-beanie::before {
+  content: '';
+  position: absolute;
+  inset: 10px 8px auto 8px;
+  height: 8px;
+  background: repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0 10px, rgba(255, 255, 255, 0) 10px 20px);
+  border-radius: 999px;
+  opacity: 0.5;
+}
+
+.knit-beanie .beanie-fold {
+  position: absolute;
+  left: 10px;
+  right: 10px;
+  bottom: 6px;
+  height: 18px;
+  background: linear-gradient(135deg, rgba(255, 236, 206, 0.9), rgba(255, 199, 134, 0.9));
+  border-radius: 12px;
+  box-shadow: inset 0 -3px 6px rgba(0, 0, 0, 0.25);
+}
+
+.knit-beanie .beanie-pom {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #ffd8a8 0%, #c96929 80%);
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.sweater-collar {
+  position: absolute;
+  bottom: -18px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 140px;
+  height: 58px;
+  background:
+    repeating-linear-gradient(135deg, rgba(255, 255, 255, 0.06) 0 12px, rgba(0, 0, 0, 0) 12px 22px),
+    linear-gradient(180deg, #f8d7a2 0%, #d9843b 100%);
+  border-radius: 32px 32px 60% 60%;
+  box-shadow:
+    0 12px 18px rgba(0, 0, 0, 0.22),
+    inset 0 -5px 8px rgba(0, 0, 0, 0.18);
+  border: 2px solid rgba(255, 242, 218, 0.85);
+  z-index: 1;
+}
+
+.sweater-collar::after {
+  content: '';
+  position: absolute;
+  width: 38px;
+  height: 26px;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%) rotate(8deg);
+  border-radius: 16px;
+  background: linear-gradient(135deg, #e2a15a, #ac4d1b);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.pumpkin-pin {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  right: 14px;
+  bottom: 32px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #ffebc5 0%, #f2a14f 60%, #a44b18 100%);
+  box-shadow:
+    0 3px 6px rgba(0, 0, 0, 0.2),
+    inset 0 0 6px rgba(255, 255, 255, 0.6);
+  z-index: 2;
+}
+
+.pumpkin-pin::before,
+.pumpkin-pin::after {
+  content: '';
+  position: absolute;
+  background: #6b2b0f;
+}
+
+.pumpkin-pin::before {
+  width: 14px;
+  height: 4px;
+  border-radius: 999px;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(90deg, #e3a25a, #a44b18);
+}
+
+.pumpkin-pin::after {
+  width: 4px;
+  height: 10px;
+  top: 6px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+.aurora-beanie {
+  background: linear-gradient(135deg, #c96b2c, #8c3414);
+}
+
+.aurora-collar {
+  background:
+    repeating-linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0 12px, rgba(0, 0, 0, 0) 12px 22px),
+    linear-gradient(180deg, #ffd7a6 0%, #ef9c4f 100%);
+}
+
+.aurora-pin {
+  right: 10px;
+}
+
+.cosmos-beanie {
+  width: 180px;
+  height: 80px;
+  top: -44px;
+  background: linear-gradient(135deg, #8a3f1b, #4d1c0c);
+}
+
+.cosmos-beanie .beanie-fold {
+  height: 22px;
+}
+
+.cosmos-beanie .beanie-pom {
+  width: 32px;
+  height: 32px;
+  top: -12px;
+}
+
+.cosmos-collar {
+  width: 200px;
+  height: 78px;
+  bottom: -26px;
+  background:
+    repeating-linear-gradient(135deg, rgba(255, 255, 255, 0.06) 0 14px, rgba(0, 0, 0, 0) 14px 26px),
+    linear-gradient(180deg, #f7d49a 0%, #c26a25 100%);
+}
+
+.cosmos-collar::after {
+  width: 54px;
+  height: 30px;
+}
+
+.cosmos-pin {
+  right: 22px;
+  bottom: 46px;
+}
+
+.luna-beanie {
+  background: linear-gradient(135deg, #b55b24, #702510);
+}
+
+.luna-collar {
+  background:
+    repeating-linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0 12px, rgba(0, 0, 0, 0) 12px 22px),
+    linear-gradient(180deg, #ffe4b8 0%, #d27432 100%);
+}
+
+.luna-pin {
+  right: 8px;
+  bottom: 36px;
+}
 .mini-cap {
   --cap-color: #a74916;
   --cap-band: linear-gradient(90deg, #f6d089, #fff5dd, #c77834);
@@ -839,6 +1022,35 @@ body {
     height: 230px;
   }
 
+  .knit-beanie {
+    width: 100px;
+    height: 50px;
+    top: -28px;
+  }
+
+  .cosmos-beanie {
+    width: 150px;
+    height: 70px;
+    top: -36px;
+  }
+
+  .sweater-collar {
+    width: 120px;
+    height: 52px;
+    bottom: -14px;
+  }
+
+  .cosmos-collar {
+    width: 170px;
+    height: 68px;
+    bottom: -18px;
+  }
+
+  .pumpkin-pin {
+    right: 12px;
+    bottom: 26px;
+  }
+
   .kitty.daddy .eye.left {
     left: 48px;
   }
@@ -868,6 +1080,36 @@ body {
   .kitty.daddy {
     width: 190px;
     height: 190px;
+  }
+
+  .knit-beanie {
+    width: 88px;
+    height: 44px;
+    top: -24px;
+  }
+
+  .cosmos-beanie {
+    width: 128px;
+    height: 60px;
+    top: -30px;
+  }
+
+  .sweater-collar {
+    width: 108px;
+    height: 46px;
+    bottom: -12px;
+  }
+
+  .cosmos-collar {
+    width: 150px;
+    height: 60px;
+    bottom: -16px;
+  }
+
+  .pumpkin-pin {
+    width: 28px;
+    height: 28px;
+    bottom: 22px;
   }
 
   .support-scarf {
